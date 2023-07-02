@@ -10,10 +10,10 @@ in
     ];
 
   # Set your desired hostname
-  networking.hostName = "myhostname";
+  networking.hostName = "nix-os";
 
   # Set your desired timezone
-  time.timeZone = "Your/Timezone";
+  time.timeZone = "London";
 
   # Enable the Cosmic desktop
   services.xserver = {
@@ -46,11 +46,11 @@ in
     myuser = {
       isNormalUser = true;
       extraGroups = [ "wheel" ]; # Add your desired user groups
-      home = "/home/myuser"; # Set the home directory path
+      home = "/home/nixos"; # Set the home directory path
       createHome = true;
       uid = 1000; # Set your desired UID
       shell = "/run/current-system/sw/bin/bash"; # Set your preferred shell
-      hashedPassword = "..."; # Set your hashed password
+      #hashedPassword = "..."; # Set your hashed password
     };
   };
 
